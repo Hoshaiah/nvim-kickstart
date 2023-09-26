@@ -286,6 +286,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+-- using jk to enter normal mode from insert
+vim.keymap.set(
+  { 'i' },     -- Mode: Insert
+  'jk',       -- Keys to map
+  '<Esc>',    -- Action to perform
+  { noremap = true, silent = true }  -- Options
+)
+
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
